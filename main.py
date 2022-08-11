@@ -44,6 +44,7 @@ async def pop_status():
                     await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game(name="[Offline]"))
                     
             else:
+                await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game(name=f"BM Error -> {resp.status} "))
                 print(f"Battlemetrics Error with status code: {resp.status}")
 
 
